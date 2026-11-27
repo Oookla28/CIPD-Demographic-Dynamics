@@ -1,0 +1,43 @@
+[
+ {
+  "year": 2014,
+  "province": "河北",
+  "issue": "pop_arbitrated",
+  "final": 7384.0,
+  "old": 3642.0,
+  "candidates": {
+   "birth": 3642.0,
+   "pop_table": 7384.0
+  }
+ },
+ {
+  "year": 2005,
+  "issue": "natpop_vs_provsum",
+  "nat": 130756.0,
+  "sum": 128323.0
+ },
+ {
+  "year": 2006,
+  "issue": "natpop_vs_provsum",
+  "nat": 131448.0,
+  "sum": 129131.0
+ },
+ {
+  "year": 2007,
+  "issue": "natpop_vs_provsum",
+  "nat": 132129.0,
+  "sum": 129919.0
+ },
+ {
+  "year": 2008,
+  "issue": "natpop_vs_provsum",
+  "nat": 132802.0,
+  "sum": 130827.0
+ },
+ {
+  "year": 2009,
+  "issue": "natpop_vs_provsum",
+  "nat": 133474.0,
+  "sum": 131659.0
+ }
+]

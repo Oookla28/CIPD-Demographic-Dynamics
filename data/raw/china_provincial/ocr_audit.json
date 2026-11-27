@@ -1,0 +1,95 @@
+{
+ "tables": {
+  "B0601": {
+   "rows": 32,
+   "issues_unresolved": 2,
+   "audit_entries": [
+    {
+     "region": "北京",
+     "col": "p4_sr",
+     "issue": "missing_cell"
+    },
+    {
+     "region": "山西",
+     "col": "p4_m",
+     "issue": "missing_cell"
+    },
+    {
+     "region": "山西",
+     "col": "p5p_f",
+     "issue": "missing_cell"
+    },
+    {
+     "region": "江苏",
+     "col": "p5p_m",
+     "issue": "missing_cell"
+    },
+    {
+     "region": "陕西",
+     "col": "p4_m",
+     "issue": "missing_cell"
+    },
+    {
+     "region": "新疆",
+     "col": "p5p",
+     "issue": "missing_cell"
+    },
+    {
+     "region": "山西",
+     "col": "p4_m",
+     "issue": "corrected_by_sexratio_identity",
+     "value": 83.0
+    },
+    {
+     "region": "江苏",
+     "col": "p5p_m",
+     "issue": "corrected_by_sexratio_identity",
+     "value": 34.0
+    }
+   ],
+   "n_audit": 8,
+   "csv": "/Volumes/半岛铁盒/数学建模期末结课论文/CIPD/data/raw/china_provincial/census2020_table6_1_provincial_parity_births.csv"
+  },
+  "B0603": {
+   "rows": 43,
+   "issues": 0,
+   "audit_entries": [
+    {
+     "age": 38,
+     "issue": "row_recovered_by_interpolation",
+     "values": {
+      "women": 1029050.0,
+      "births": 20911.0,
+      "birth_rate": 20.32,
+      "b1": 4464.0,
+      "f1": 4.34,
+      "b2": 11862.0,
+      "f2": 11.53,
+      "b3p": 4585.0,
+      "f3p": 4.46
+     }
+    }
+   ],
+   "csv": "/Volumes/半岛铁盒/数学建模期末结课论文/CIPD/data/raw/china_provincial/census2020_table6_3_age_parity_national.csv"
+  },
+  "B0604": {
+   "rows": 32,
+   "issues": 0,
+   "audit_entries": [],
+   "csv": "/Volumes/半岛铁盒/数学建模期末结课论文/CIPD/data/raw/china_provincial/census2020_table6_4_provincial_asfr.csv"
+  },
+  "B0605": {
+   "rows": 32,
+   "issues": 0,
+   "audit_entries": [],
+   "csv": "/Volumes/半岛铁盒/数学建模期末结课论文/CIPD/data/raw/china_provincial/census2020_table6_5_provincial_ceb.csv"
+  },
+  "B0612": {
+   "rows": 62,
+   "issues": 0,
+   "audit_entries": [],
+   "csv": "/Volumes/半岛铁盒/数学建模期末结课论文/CIPD/data/raw/china_provincial/census2020_table6_12_age_mean_ceb.csv"
+  }
+ },
+ "generated": "2026-11-27T12:15:44"
+}
