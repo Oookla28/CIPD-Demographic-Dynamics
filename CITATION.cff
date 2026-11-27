@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software, its benchmark, or its result tables, please cite this repository."
+type: software
+title: "CIPD: Structure-Preserving Partial Identification and Robust Policy Decisions in Partially Observed Demographic Dynamics"
+version: "1.0.0"
+date-released: "2026-11-27"
+license: MIT
+repository-code: "https://github.com/Oookla28/CIPD-Demographic-Dynamics"
+authors:
+  - family-names: Zhang
+    given-names: Jinghan
+    affiliation: "School of Computer Science and Technology, Changchun University of Science and Technology"
+    email: zhangjinghan@mails.cust.edu.cn
+keywords:
+  - demography
+  - partial identification
+  - causal inference
+  - robust optimization
+  - linear programming
+  - china fertility policy
+  - reproducible research
+preferred-citation:
+  type: article
+  title: "不完全观测下人口动力系统的结构保持型部分识别与鲁棒政策决策——以中国生育政策改革为例"
+  authors:
+    - family-names: Zhang
+      given-names: Jinghan
+  year: 2026
+  note: "Course paper / working paper; English manuscript in preparation."

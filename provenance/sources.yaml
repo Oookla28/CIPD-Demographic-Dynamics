@@ -1,0 +1,132 @@
+project: CIPD
+retrieval_date: '2026-11-26'
+sources:
+- id: D01_CN_NBS_2025_COMMUNIQUE
+  title: 中华人民共和国2025年国民经济和社会发展统计公报
+  institution: 国家统计局 (NBS)
+  url: https://www.stats.gov.cn/sj/zxfb/202602/t20260228_1962662.html
+  published: '2026-02-28'
+  local_files:
+  - data/raw/china_annual_vital_1990_2025.csv
+  - data/raw/china_census_age_anchors_2000_2025.csv
+  unit: 万人 (10,000 persons), ‰
+  status: verified
+- id: D02_CN_CENSUS_2010_T63
+  title: 中国2010年人口普查资料 表6-3 全国育龄妇女分年龄、孩次的生育状况
+  institution: 国家统计局 (NBS)
+  url: https://www.stats.gov.cn/sj/pcsj/rkpc/6rp/html/B0603a.htm
+  published: '2012'
+  local_files:
+  - data/raw/china_census2010_table6_3_age_parity.csv
+  unit: 人 (persons), ‰; long-form sample (~9.5% sampling ratio, 35.725M women)
+  status: verified
+- id: D03_CN_ANNUAL_VITAL_SERIES
+  title: 国家统计局历年统计年鉴与统计公报人口汇总 (1990-2025) 及卫健委孩次占比 (2013-2024)
+  institution: 国家统计局 (NBS) / 国家卫生健康委员会 (NHC) / 民政部 (MCA)
+  url: https://zh.wikipedia.org/zh-cn/%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E4%BA%BA%E5%8F%A3
+  cross_verified_urls:
+  - https://www.stats.gov.cn/sj/zxfb/202602/t20260228_1962662.html
+  - https://www.stats.gov.cn/zt_18555/zthd/lhfw/2025/2025_hgjj/202502/t20250228_1958824.html
+  - https://www.stats.gov.cn/xxgk/sjfb/tjgb2020/202302/t20230228_1919001.html
+  local_files:
+  - data/raw/china_annual_vital_1990_2025.csv
+  - data/raw/china_parity_marriage_2012_2025.csv
+  status: verified
+- id: D04_CN_NHC_2025_SUBSIDY
+  title: 育儿补贴制度政策问答
+  institution: 国家卫生健康委员会 (NHC)
+  url: https://www.nhc.gov.cn/rkjcyjtfzs/c100147/202507/06cb12b180904128ae7e55620b713ac0.shtml
+  published: '2025-07-28'
+  local_files:
+  - provenance/policy_codebook.csv
+  status: verified
+- id: D05_KR_STATS_2014_2025
+  title: Birth Statistics in 2024 & Vital Statistics of Korea (2014-2025)
+  institution: Statistics Korea / Ministry of Data and Statistics (KOSIS)
+  url: https://mods.go.kr/boardDownload.es?bid=11773&list_no=439008&seq=2
+  cross_verified_urls:
+  - https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1B8000F&language=en
+  - https://www.korea.net/NewsFocus/Society/view?articleId=288047
+  local_files:
+  - data/external/korea_vital_2014_2025.csv
+  status: verified
+- id: D06_BLOCKED_BULK_HFD_PROVINCIAL
+  title: HFD Bulk ZIPs (8-16 countries), 7th Census Full Provincial Tables & 31-Province
+    Policy Crawls
+  institution: Human Fertility Database / NBS / Provincial Governments
+  url: https://www.humanfertility.org/Data/ZippedDataFiles
+  status: blocked_by_vm_offline_policy
+  note: VM sandbox has outbound internet disabled; bulk ZIP downloads and multi-province
+    crawlers cannot execute directly inside VM.
+- id: D07_CN_CENSUS2020_YEARBOOK
+  title: 中国人口普查年鉴-2020 表6-1/6-3/6-4/6-5/6-12（长表生育表）
+  institution: 国家统计局 (NBS)
+  url: https://www.stats.gov.cn/sj/pcsj/rkpc/7rp/indexch.htm
+  local_files:
+  - data/raw/china_provincial/raw7rp/B0601.jpg
+  - data/raw/china_provincial/raw7rp/B0603.jpg
+  - data/raw/china_provincial/raw7rp/B0604.jpg
+  - data/raw/china_provincial/raw7rp/B0605.jpg
+  - data/raw/china_provincial/raw7rp/B0612.jpg
+  - data/raw/china_provincial/census2020_table6_1_provincial_parity_births.csv
+  - data/raw/china_provincial/census2020_table6_3_age_parity_national.csv
+  - data/raw/china_provincial/census2020_table6_4_provincial_asfr.csv
+  - data/raw/china_provincial/census2020_table6_5_provincial_ceb.csv
+  - data/raw/china_provincial/census2020_table6_12_age_mean_ceb.csv
+  - data/raw/china_provincial/ocr_audit.json
+  unit: 人/‰; 长表抽样比≈10.06%（由6-3育龄妇女32,555,388人推算）
+  status: verified_by_ocr_with_structural_validation
+  note: 官网以JPG图片发布；OCR提取后经行/列求和恒等式、全国=Σ省、性别比恒等式校验；无法识别的单元格经4倍放大重OCR或恒等式推导并记录于ocr_audit.json
+- id: D08_CN_YEARBOOK_PROV_PANEL
+  title: 中国统计年鉴2005-2025各年 分地区人口/出生率/死亡率/自然增长率/城镇人口比重表
+  institution: 国家统计局 (NBS)
+  url: https://www.stats.gov.cn/sj/ndsj/
+  local_files:
+  - data/raw/china_provincial/yearbooks/
+  - data/raw/china_provincial/china_provincial_panel_2004_2024.csv
+  - data/raw/china_provincial/yearbooks/panel_audit.json
+  unit: 万人, ‰
+  status: verified
+  note: 2004-2013为HTML/Excel表，2014-2024为JPG表(OCR)；CBR-CDR=NGR与全国=Σ省恒等式校验；2005-2009年分省合计低于全国1.4-1.9%为官方未校准估计（含现役军人及抽样调整），已在data_quality_audit说明
+- id: D09_HFC_ASFR_BO
+  title: 'Human Fertility Collection: Age-specific fertility rates by birth order
+    (HFC_ASFR_BO, HFC_ASFRstand_BO, HFC_TFRMAB_BO)'
+  institution: HFC / MPIDR & VID (https://www.fertilitydata.org)
+  url: https://www.fertilitydata.org/Data/ZippedDataFiles
+  local_files:
+  - data/external/hfd_wpp/raw_hfc/HFC_ASFR_BO.zip
+  - data/external/hfd_wpp/raw_hfc/HFC_ASFRstand_BO.zip
+  - data/external/hfd_wpp/raw_hfc/HFC_TFRMAB_BO.zip
+  - data/external/hfd_wpp/hfc_asfr_bo_panel.csv
+  - data/external/hfd_wpp/hfc_country_coverage.csv
+  unit: rates (per woman-year), single age 15-49 × parity 1/2/3+
+  status: verified
+  note: HFC由各国官方生命统计汇总（SourceType=vital为主）；仅保留AgeDef=ACY（周岁），19国入选：16个开发国+3个严格独立测试国(GBRTENW/CHE/TWN)。HFD需登录无法批量下载，已用HFC替代（同一HFD/MPIDR体系，HFD数据的开放子集）
+- id: D10_HFD_STFF
+  title: 'Human Fertility Database: Short-Term Fertility Fluctuations (STFF) monthly
+    births'
+  institution: HFD / MPIDR & VID
+  url: https://www.humanfertility.org/File/GetDocumentFree/STFF/stff.csv
+  local_files:
+  - data/external/hfd_wpp/raw_stff/stff.csv
+  unit: births by month, 2000-2025, ~50 countries
+  status: verified
+  note: STFF为HFD公开(免登录)子集；用于月度季节性与短期波动验证
+- id: D11_WPP2024_R_PKG
+  title: UN World Population Prospects 2024 (R packages wpp2024 / wpp2024extra, PPgp)
+  institution: United Nations DESA Population Division (redistributed by PPgp)
+  url: https://github.com/PPgp/wpp2024
+  local_files:
+  - data/external/hfd_wpp/wpp2024_extract/
+  unit: TFR/births/population by age & sex, 1950-2100
+  status: verified
+  note: WPP官方API需密钥(401)、bulk CSV链接改版，改用PPgp官方镜像R包（数据同源）；提取仅用于外部参照与CCM输入，不用于E04事后调参
+- id: D12_POLICY_TIMELINE
+  title: 中国生育政策省级落地时间线（单独二孩2014各省精确日期、全面二孩2016、三孩2021、育儿补贴2025）
+  institution: 各省人大常委会决议（经zh.wikipedia汇总表转录并抽样核对官方报道）
+  url: https://zh.wikipedia.org/zh-cn/单独两孩
+  local_files:
+  - data/raw/china_provincial/provincial_policy_timeline.csv
+  - provenance/policy_codebook.csv
+  status: verified_secondary_source
+  note: 单独二孩各省实施日期逐省转录；浙江2014-01-17、北京2014-02-21、山东2014-05-30、西藏2014-09-17等与官方报道核对一致；新疆日期标记approximate

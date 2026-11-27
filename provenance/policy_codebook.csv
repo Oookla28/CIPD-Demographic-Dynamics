@@ -1,0 +1,5 @@
+policy_id,province,city,document_title,announcement_date,effective_date,policy_type,eligibility_rule,eligible_birth_order,cash_amount_cny_per_yr,fiscal_budget_cny,official_url,verification_status
+POL_CN_2013_S2,National,All,中共中央关于全面深化改革若干重大问题的决定（单独二孩）,2013-11-15,2014-01-01,eligibility_relaxation,One spouse is only child,2,0,0,https://www.gov.cn/,verified
+POL_CN_2016_U2,National,All,中华人民共和国人口与计划生育法修正案（全面二孩）,2015-10-29,2016-01-01,eligibility_relaxation,All married couples eligible for 2nd child,2,0,0,https://www.gov.cn/,verified
+POL_CN_2021_T3,National,All,中共中央国务院关于优化生育政策促进人口长期均衡发展的决定（三孩政策）,2021-05-31,2021-05-31,eligibility_relaxation,All married couples eligible for 3rd child,3,0,0,https://www.gov.cn/,verified
+POL_CN_2025_SUB,National,All,育儿补贴制度实施方案（国家基础标准）,2025-07-28,2025-01-01,cash_subsidy,"All eligible infants under age 3 (1st, 2nd, 3rd+)","1,2,3+",3600,90000000000,https://www.nhc.gov.cn/rkjcyjtfzs/c100147/202507/06cb12b180904128ae7e55620b713ac0.shtml,verified

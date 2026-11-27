@@ -1,0 +1,57 @@
+.research/checkpoints/
+.research/cache/
+.research/review/
+.research/build/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.brf
+*.dvi
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+*.synctex(busy)
+*.synctex.gz(busy)
+*-SAVE-ERROR
+
+# ---- Python / env ----
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# ---- macOS / exFAT noise ----
+._*
+.DS_Store
+
+# ---- LaTeX build artifacts ----
+*.aux
+*.log
+*.out
+*.toc
+*.xdv
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# ---- large raw data: re-fetch with `make crawl` (see README §5) ----
+data/external/hfd_wpp/raw_hfc/*/*.txt
+
+# ---- 论文稿件不入库（仅本地保留，避免提前公开/误提交） ----
+paper/

@@ -1,0 +1,14 @@
+table,column,type,unit,description
+china_annual_vital_1990_2025,year,int,calendar_year,Statistical year (1990-2025)
+china_annual_vital_1990_2025,pop_wan,float,"10,000 persons",Year-end mainland population
+china_annual_vital_1990_2025,births_wan,float,"10,000 persons",Annual live births (contemporaneous NBS series)
+china_annual_vital_1990_2025,deaths_wan,float,"10,000 persons",Annual deaths
+china_annual_vital_1990_2025,revised_births_wan_post7th,float,"10,000 persons",Post-2020-Census retrospectively revised annual births (where published)
+china_parity_marriage_2012_2025,p1_share,float,proportion,Share of 1st-order births in total births
+china_parity_marriage_2012_2025,p2_share,float,proportion,Share of 2nd-order births in total births
+china_parity_marriage_2012_2025,p3p_share,float,proportion,Share of 3rd+ order births in total births
+china_census2010_table6_3_age_parity,age,int,years,Single year of age of mother (15-49)
+china_census2010_table6_3_age_parity,women_avg,int,persons,Sampled average reproductive-age women in 6th Census long form
+china_census2010_table6_3_age_parity,"b1,b2,b3p",int,persons,"Sampled live births by birth order (1st, 2nd, 3rd+) during 2009.11.1-2010.10.31"
+korea_vital_2014_2025,births_thousands,float,"1,000 persons",Annual live births in South Korea
+korea_vital_2014_2025,tfr,float,births/woman,Period Total Fertility Rate

@@ -1,0 +1,97 @@
+runtime:
+  python: 3.12.16 (uv-managed, .venv)
+  r: 4.5.3 (CRAN universal arm64, relocated user-install)
+  os: macOS arm64 (darwin 25.5.0)
+  internet: enabled (Level-3 sprint)
+  note: Level-1/2 numbers were produced on the original 2vCPU/7.8GiB Linux VM; Level-3
+    reruns on local macOS. Engine implementations identical.
+installed_libraries:
+- name: NumPy
+  version: 2.1.3
+  license: BSD-3-Clause
+  usage: Core linear algebra and array computation
+- name: SciPy (incl. HiGHS)
+  version: 1.15.2
+  license: 'BSD-3-Clause (HiGHS: MIT)'
+  usage: Sparse LP (linprog method='highs'), MILP, optimization, sparse matrices
+- name: Pandas
+  version: 2.2.3
+  license: BSD-3-Clause
+  usage: Tabular data processing
+- name: Matplotlib
+  version: 3.10.1
+  license: PSF-based
+  usage: Automated publication figure generation
+- name: Seaborn
+  version: 0.13.2
+  license: BSD-3-Clause
+  usage: Statistical visualization
+- name: SymPy
+  version: 1.13.3
+  license: BSD-3-Clause
+  usage: Symbolic verification of algebraic identities
+- name: PyYAML / Pillow / xlrd / requests / bs4 / lxml
+  version: venv
+  license: MIT/HPND/BSD
+  usage: Parsing, OCR I/O, crawling
+unavailable_planned_libraries:
+- name: JAX / PyMC / Optuna / pymoo
+  status: not_installed
+  mitigation: NuPy/SciPy adjoint gradients + deterministic grid/Sobol search continue
+    to be used.
+- name: HFD bulk ZIP downloads (8-16 countries)
+  status: requires_login
+  mitigation: HFC (HFD/MPIDP open sister database) provides the same age×parity ASFR
+    content without login; STFF open subset also downloaded.
+- name: UN WPP public API
+  status: http_401_api_key_required
+  mitigation: Used PPgp/wpp2024 official R mirror of WPP2024 instead (identical underlying
+    data).
+external_baselines:
+- name: did (Callaway & Sant'Anna)
+  version: 2.1.2
+  license: GPL-2
+  source: CRAN/Posit P3M binary
+  usage: E05 staggered DiD (att_gt, aggte)
+  integration: 独立R脚本调用，GPL代码不入MIT仓库
+- name: HonestDiD
+  version: 0.2.8
+  license: GPL-3
+  source: CRAN
+  usage: E05 Delta^SD(M) robust CI
+  deps: Rglpk 0.6-5.1 + GLPK 5.0 (本地源码编译)
+- name: ccmpp.tmb
+  version: commit 2f14f1252bdd8874a5fa49ab9f40487626d4cbef
+  license: MIT
+  source: https://github.com/mrc-ide/ccmpp.tmb
+  usage: E02/E04 cohort-component smoothing baseline (TMB)
+- name: bayesTFR
+  version: commit 2d949b8fd2c93e2823074dc129bfb3fbfbc3b23a
+  license: GPL-2
+  source: https://github.com/PPgp/bayesTFR
+  usage: E04 Bayesian TFR projection baseline (rstan MCMC)
+- name: Ellison et al. (2026) replication code
+  version: Zenodo 10.5281/zenodo.15179793
+  license: as published on Zenodo
+  source: https://zenodo.org/records/15179793
+  usage: E02/E04 parity-specific Bayesian GAM + HMC (Stan mod_a/mod_p)
+- name: wpp2024 / wpp2024extra
+  version: HEAD (PPgp)
+  license: GPL-3
+  source: https://github.com/PPgp/wpp2024
+  usage: WPP2024 external reference data
+- name: PyFixest
+  version: '>=0.24 (PyPI)'
+  license: MIT
+  source: PyPI
+  usage: E05 high-dimensional FE event study
+- name: RapidOCR (onnxruntime)
+  version: PyPI latest
+  license: Apache-2.0
+  source: PyPI
+  usage: Census/yearbook JPG table OCR
+- name: rstan / TMB / nimble
+  version: CRAN binaries
+  license: GPL-3 / GPL-2 / BSD
+  source: CRAN
+  usage: Bayesian baseline engines

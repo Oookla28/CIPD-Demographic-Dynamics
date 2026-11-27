@@ -1,0 +1,21 @@
+claim_id,claim,experiment,evidence_file,status,notes
+C01,V0/V1 人口流量模型满足精确人口账本守恒与胎次非负守恒,E01,results/tables/E01_accounting_tests.csv,VERIFIED,v0_rel_res=2.73e-16; v1_rel_res=2.17e-16; adjoint_speedup=155.7x
+C02,2010六普35×3真实矩阵遮蔽下CIPD边界100%覆盖真值而IPF偏差24.1%,E02,results/tables/E02_real_census2010_masking.csv,VERIFIED,"True=289,646; IPF err=69,719; CIPD Mask-F=[0,372295]"
+C03,合成因果恢复100%覆盖且0%错误方向(传统外推20.8%),E03,results/tables/E03_synthetic_causal_recovery.csv,VERIFIED,DGP-7 naive wrong-sign 66.5%
+C04,滚动预测区间覆盖(全国序列),E04-China,results/tables/E04_rolling_forecast_china.csv,VERIFIED_WITH_NEGATIVE,2016起点结构突变0/4覆盖——负面结果已记录
+C05,全国宏观单序列三政策识别区间跨0(C2/C3分级),E05-China,results/tables/E05_china_policy_bounds.csv,VERIFIED,诚实负面识别结论
+C06,Shapley数量/结构/时机分解,E06,results/tables/E06_shapley_decomposition.csv,VERIFIED,条件性(2020/2025依赖宏观校准假设)
+C07,双轨迹VOI在预算3.0下缩宽96.5%且与穷举最优零间隙,E07,results/tables/E07_voi_observation_selection.csv,VERIFIED,
+C08,基线保护型鲁棒决策(普惠托育R(u)<=0),E08,results/tables/E08_robust_policy_metrics.csv,VERIFIED_C3,弹性集合为情景设定
+C09,19国HFC真实数据上CIPD重构对遮蔽强度不变(MARE 4.4-4.9%)并优于全部基线,E02-L3,results/tables/E02_multicountry_summary.csv,VERIFIED,Mask>=50%时优于次优基线2.7-16.9x; Mask A/B插值略优(诚实负面)
+C10,Ellison et al.(2026) GAM+HMC适配基线在时期矩阵上MAE 0.003-0.009且90%区间实测覆盖47.5-81.9%,E02-L3,results/tables/E02_multicountry_ellison.csv,VERIFIED,强基线欠覆盖的重要反例; 域迁移局限已声明
+C11,严格滚动预测587个预测·方法: 点精度无方法显著优于持续性; CIPD覆盖98.5%但WIS最差(最坏情形界非概率分布),E04-L3,results/tables/E04_rolling_multicountry_overall.csv,VERIFIED_WITH_NEGATIVE,诚实报告:结构性下滑超出所有平滑模型
+C12,3个严格独立测试国(从未调参)重构MAE落入开发国分布,E09-L3,results/tables/E09_holdout_vs_dev.csv,VERIFIED,CHE 0.00061/96.9%; GBRTENW 0.00068/89.2%; TWN 0.00139/100%
+C13,31省真实面板: 2014/2016政策连续强度事件研究前期平行趋势成立,E05-L3,results/tables/E05_event_study_A_dandui2014.csv,VERIFIED,
+C14,HonestDiD Delta^SD(M) 在M=0到3全部跨0: 省级截面不支持稳健正效应,E05-L3,results/tables/E05_honestdid_sensitivity.csv,VERIFIED,相对偏差法与平滑法一致
+C15,因果约束嵌入人口流多面体: 识别宽度-56.1%(总出生)/-88.0%(2017二孩),E05-CCPI-L3,results/tables/E05_ccpi_did_embedding.csv,VERIFIED,对偶间隙<=5.8e-16
+C16,"序列基复用加速5.10-5.18x(同精度1e-12); 省块对偶分解1.19-1.96x(间隙5.5e-9, 未稳定达2x)",E10-L3,results/tables/E10_acceleration.csv,VERIFIED_PARTIAL,目标锥预解无效(0.84x)已如实报告; XL的2x声明已撤回
+C17,9项消融: 胎次结构为主组件(+331%误差); 人口核算/队列动态贡献覆盖率,Ablation,results/tables/Ablation_summary.csv,VERIFIED,
+C18,ccmpp.tmb 传统CCM基线(中国E04): 完成,E04,results/tables/E04_china_births_headtohead.csv,VERIFIED,ccmppR单岁年度步长跑通; CCM MAE 392/MAPE 34.8% 劣于持续性 257/24.7% (冻结率+年龄结构在快速生育率下滑下的失效)
+C19,七普A0105(1-5)结构化: 墨迹投影列带+8x OCR,data,data/raw/china_provincial/raw7rp/,VERIFIED_PARTIAL,全国行0-14/60-64锚点精确; 27/31省完整; 4省4-6%缺口已标注; A0110仍PARTIAL
+C20,bayesTFR E04基线: 完成2/3起点(5年分辨率),E04,results/tables/E04_rolling_multicountry_matched.csv,VERIFIED_PARTIAL,同单元对齐: bayesTFR MAE 0.177(最差) 覆盖67.2%(名义90%) 宽度0.52(最窄); 2016起点因bayesTFR内部bug失败

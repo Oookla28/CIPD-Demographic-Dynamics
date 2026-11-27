@@ -1,0 +1,19 @@
+file_path,retrieved_at,method,sha256,bytes
+data/raw/china_annual_vital_1990_2025.csv,2026-11-26T16:30:00+08:00,verified_via_official_web_retrieval,d1fe2cba671e48f1b4468e76c69544f41d01505c05ed89ed82e26f0af983f28b,1691
+data/raw/china_parity_marriage_2012_2025.csv,2026-11-26T16:30:00+08:00,verified_via_official_web_retrieval,440e21fef05c16b6182e83a99be6878af5cb6b831a9a398f6548866ea106a29a,1091
+data/raw/china_census2010_table6_3_age_parity.csv,2026-11-26T16:30:00+08:00,verified_via_official_web_retrieval,33f69a9956b0525fb4d7e872f71ee09973950265f4dca924e13e48fc863a9f2d,1945
+data/raw/china_census_age_anchors_2000_2025.csv,2026-11-26T16:30:00+08:00,verified_via_official_web_retrieval,b1d1be1cae40506d49c75848bedb27e9d7a97395114644102196049a72442e27,382
+data/external/korea_vital_2014_2025.csv,2026-11-26T16:30:00+08:00,verified_via_official_web_retrieval,8fa7ed81654c518c319616320a64b18c29ddb459d791d9bdf2a93e5e3f27a7db,293
+provenance/policy_codebook.csv,2026-11-26T16:30:00+08:00,verified_via_official_web_retrieval,e9f523df2fe2d1795e4de9d7f423a84aa5431203af82057ab751b0a07969ff77,1188
+2026-11-26,R CRAN,https://cran.r-project.org/bin/macosx/big-sur-arm64/base/R-4.5.3-arm64.pkg,~/opt/R/R.framework,101786791,R 4.5.3 便携安装(用户目录重定位+重签名)
+2026-11-26,HFC,https://www.fertilitydata.org/File/GetFile/Zip/*.zip,data/external/hfd_wpp/raw_hfc/,~28MB,HFC_ASFR_BO/ASFRstand_BO/TFRMAB_BO 等 8 个 ZIP
+2026-11-26,HFD STFF,https://www.humanfertility.org/File/GetDocumentFree/STFF/stff.csv,data/external/hfd_wpp/raw_stff/stff.csv,163452,月度出生 2000-2025 约50国
+2026-11-26,NBS 七普年鉴,https://www.stats.gov.cn/sj/pcsj/rkpc/7rp/zk/html/B06*.jpg,data/raw/china_provincial/raw7rp/,~6MB,6-1/6-3/6-4/6-5/6-12 等 8 张原图(哈希存档)
+2026-11-26,NBS 统计年鉴,https://www.stats.gov.cn/sj/ndsj/{2005..2025}/,data/raw/china_provincial/yearbooks/,~5MB,21 版年鉴分省人口/出生率表(HTML/XLS/JPG)
+2026-11-26,NBS 六普,https://www.stats.gov.cn/sj/pcsj/rkpc/6rp/html/B0605.htm,data/raw/china_provincial/census2010_table6_5_provincial_ceb.csv,42899,2010 六普分省活产子女分布
+2026-11-26,zenodo,https://zenodo.org/api/records/15179793/files/parity_fert.zip/content,data/external/baselines/ellison_2026/parity_fert.zip,122180,Ellison et al. 2026 复现代码
+2026-11-26,GitHub,https://github.com/mrc-ide/ccmpp.tmb,/tmp/ccmpp_tmb (installed to R lib),—,commit 2f14f12
+2026-11-26,GitHub,https://github.com/PPgp/bayesTFR,/tmp/bayesTFR_src (installed),—,commit 2d949b8
+2026-11-26,GitHub,https://github.com/PPgp/wpp2024,(installed R packages),—,WPP2024 数据镜像
+2026-11-26,GNU,https://ftp.gnu.org/gnu/glpk/glpk-5.0.tar.gz,~/opt/glpk,~4MB,GLPK 5.0 源码编译(Rglpk 依赖)
+2026-11-26,Wikipedia,https://zh.wikipedia.org/zh-cn/单独两孩,data/raw/china_provincial/provincial_policy_timeline.csv,—,31省单独二孩落地日期转录
