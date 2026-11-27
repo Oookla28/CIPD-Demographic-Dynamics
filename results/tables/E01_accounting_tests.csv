@@ -1,0 +1,2 @@
+v0_max_rel_residual,v1_max_rel_residual,nonnegative_pass,adjoint_max_abs_err,adjoint_speedup_vs_fd,all_invariants_passed
+2.729105972052008e-16,2.1660492043391473e-16,True,5.215236797084799e-06,155.68,True

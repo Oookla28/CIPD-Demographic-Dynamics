@@ -1,0 +1,5 @@
+country,pre_max_d2_k,M_k_per_yr2,cum_effect_lower_k,cum_effect_upper_k,sign_robust_positive
+South Korea (Real KOSIS),35.2,35.0,-61.71,242.19,False
+South Korea (Real KOSIS),35.2,45.0,-101.71,282.19,False
+South Korea (Real KOSIS),35.2,60.0,-161.71,342.19,False
+South Korea (Real KOSIS),35.2,80.0,-241.71,367.85,False

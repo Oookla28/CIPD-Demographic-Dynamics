@@ -1,0 +1,19 @@
+scenario,year,pop_wan,births_wan,deaths_wan
+Low (Continued Decline),2025,140489.0,792.0,1131.0
+Low (Continued Decline),2030,138305.0,680.0,1187.8
+Low (Continued Decline),2035,135326.0,630.0,1290.8
+Low (Continued Decline),2040,131448.0,580.0,1437.0
+Low (Continued Decline),2050,120539.0,480.0,1751.0
+Low (Continued Decline),2070,92965.0,350.0,1641.9
+Baseline (Current 2025 Pol),2025,140489.0,792.0,1131.0
+Baseline (Current 2025 Pol),2030,138545.0,760.0,1187.8
+Baseline (Current 2025 Pol),2035,136011.0,725.0,1290.8
+Baseline (Current 2025 Pol),2040,132653.0,690.0,1437.0
+Baseline (Current 2025 Pol),2050,123009.0,620.0,1751.0
+Baseline (Current 2025 Pol),2070,98340.0,500.0,1641.9
+Robust Support (U2/U4),2025,140489.0,792.0,1131.0
+Robust Support (U2/U4),2030,138815.0,850.0,1187.8
+Robust Support (U2/U4),2035,136753.0,822.5,1290.8
+Robust Support (U2/U4),2040,133905.0,795.0,1437.0
+Robust Support (U2/U4),2050,125394.0,740.0,1751.0
+Robust Support (U2/U4),2070,103335.0,640.0,1641.9

@@ -1,0 +1,60 @@
+[
+ {
+  "instance": "L_T30",
+  "n_vars": 9555,
+  "n_targets": 26,
+  "scipy_single": {
+   "runtime": 3.409973457999513,
+   "peak_mb": 3.417295,
+   "obj": 109.39223391922886
+  },
+  "cold_sequence": {
+   "total_s": 21.429417332999947,
+   "obj_last": 109.39223391922883
+  },
+  "warm_sequence": {
+   "total_s": 4.202033749999828,
+   "max_obj_diff_vs_cold": 1.0231815394945443e-12
+  },
+  "speedup_sequence": 5.099772778598179,
+  "prune": {
+   "runtime": 2.2267932089998794,
+   "n_dropped": 2,
+   "obj": 109.39223391922883,
+   "obj_diff": 0.0
+  },
+  "accuracy": {
+   "scipy_dual_gap": 0.0,
+   "cold_obj": 109.39223391922883,
+   "scipy_obj": 109.39223391922883,
+   "obj_diff": 0.0
+  }
+ },
+ {
+  "instance": "XL_31prov_T10",
+  "n_vars": 100905,
+  "nnz_eq": 227850,
+  "nnz_ub": 137950,
+  "national_band": [
+   22320.0,
+   27280.000000000004
+  ],
+  "cold_highs": {
+   "runtime": 43.49511220900058,
+   "peak_mb": 7.012541,
+   "obj": 22320.000000000106,
+   "iterations": 30531
+  },
+  "benders_1d": {
+   "runtime_s": 36.65416750000077,
+   "n_bisection_evals": 42,
+   "price_hi": 1.0000000298030045,
+   "price_lo": 1.0000000298023224,
+   "total_births_at_hi": 26415.07051950463,
+   "dual_bound": 22319.999877954593,
+   "cold_obj": 22320.000000000106,
+   "rel_gap_vs_cold": 5.467988906741554e-09,
+   "speedup": 1.1866348406084974
+  }
+ }
+]

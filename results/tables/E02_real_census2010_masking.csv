@@ -1,0 +1,5 @@
+scenario,true_2nd_births_age25_39,cipd_lower,cipd_upper,cipd_width,true_covered,ipf_point_est,ipf_abs_err,maxent_point_est,maxent_abs_err
+Mask-A (Total Births Only),289646.0,0.0,1190060.0,1190060.0,True,219927.0,69719.0,288192.9,1453.1
+Mask-B (Age Marginals Only),289646.0,0.0,703008.0,703008.0,True,219927.0,69719.0,288192.9,1453.1
+Mask-C (Parity Marginals Only),289646.0,0.0,372295.0,372295.0,True,219927.0,69719.0,288192.9,1453.1
+Mask-F (Age + Parity Marginals),289646.0,0.0,372295.0,372295.0,True,219927.0,69719.0,288192.9,1453.1

@@ -1,0 +1,39 @@
+{
+ "experiment": "E02_multicountry_masking",
+ "countries": [
+  "JPN",
+  "KOR",
+  "DEUTNP",
+  "SWE",
+  "NOR",
+  "FIN",
+  "DNK",
+  "AUT",
+  "CZE",
+  "NLD",
+  "HUN",
+  "ITA",
+  "ESP",
+  "USA",
+  "CAN",
+  "POL"
+ ],
+ "masks": [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G"
+ ],
+ "methods": [
+  "interp",
+  "ipf",
+  "maxent",
+  "nmf",
+  "cipd"
+ ],
+ "runtime_sec": 106.57,
+ "n_cases": 2160
+}

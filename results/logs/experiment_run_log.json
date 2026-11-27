@@ -1,0 +1,222 @@
+{
+ "experiment_run_log": "CIPD Level-1..Level-3 consolidated",
+ "generated": "2026-11-26T20:08:31",
+ "environment": {
+  "python": "3.12.16 (uv venv)",
+  "r": "4.5.3 (CRAN arm64, user-space relocated)",
+  "hardware": "macOS arm64",
+  "internet": "enabled"
+ },
+ "experiments": {
+  "E02_multicountry": {
+   "experiment": "E02_multicountry_masking",
+   "countries": [
+    "JPN",
+    "KOR",
+    "DEUTNP",
+    "SWE",
+    "NOR",
+    "FIN",
+    "DNK",
+    "AUT",
+    "CZE",
+    "NLD",
+    "HUN",
+    "ITA",
+    "ESP",
+    "USA",
+    "CAN",
+    "POL"
+   ],
+   "masks": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G"
+   ],
+   "methods": [
+    "interp",
+    "ipf",
+    "maxent",
+    "nmf",
+    "cipd"
+   ],
+   "runtime_sec": 106.57,
+   "n_cases": 2160
+  },
+  "E09_loco": {
+   "runtime_sec": 122.7,
+   "q_tuned_development": 0.95,
+   "qgrid": [
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95
+   ],
+   "seed": 101,
+   "n_grid_cases": 665
+  },
+  "E04_multicountry": {
+   "runtime_sec": 167.2,
+   "origins": [
+    2005,
+    2010,
+    2013,
+    2016,
+    2020
+   ],
+   "countries": [
+    "JPN",
+    "KOR",
+    "DEUTNP",
+    "SWE",
+    "NOR",
+    "FIN",
+    "DNK",
+    "AUT",
+    "CZE",
+    "NLD",
+    "HUN",
+    "ITA",
+    "ESP",
+    "USA",
+    "CAN",
+    "POL"
+   ],
+   "n_forecasts": 2348
+  },
+  "E05_provincial": {
+   "runtime_sec": 15.5,
+   "n_provinces": 31,
+   "years": [
+    2004,
+    2024
+   ],
+   "note_2020": "2020 missing from provincial panel (census year, no yearbook rate table); excluded."
+  },
+  "E10_acceleration": [
+   {
+    "instance": "L_T30",
+    "n_vars": 9555,
+    "n_targets": 26,
+    "scipy_single": {
+     "runtime": 3.409973457999513,
+     "peak_mb": 3.417295,
+     "obj": 109.39223391922886
+    },
+    "cold_sequence": {
+     "total_s": 21.429417332999947,
+     "obj_last": 109.39223391922883
+    },
+    "warm_sequence": {
+     "total_s": 4.202033749999828,
+     "max_obj_diff_vs_cold": 1.0231815394945443e-12
+    },
+    "speedup_sequence": 5.099772778598179,
+    "prune": {
+     "runtime": 2.2267932089998794,
+     "n_dropped": 2,
+     "obj": 109.39223391922883,
+     "obj_diff": 0.0
+    },
+    "accuracy": {
+     "scipy_dual_gap": 0.0,
+     "cold_obj": 109.39223391922883,
+     "scipy_obj": 109.39223391922883,
+     "obj_diff": 0.0
+    }
+   },
+   {
+    "instance": "XL_31prov_T10",
+    "n_vars": 100905,
+    "nnz_eq": 227850,
+    "nnz_ub": 137950,
+    "national_band": [
+     22320.0,
+     27280.000000000004
+    ],
+    "cold_highs": {
+     "runtime": 43.49511220900058,
+     "peak_mb": 7.012541,
+     "obj": 22320.000000000106,
+     "iterations": 30531
+    },
+    "benders_1d": {
+     "runtime_s": 36.65416750000077,
+     "n_bisection_evals": 42,
+     "price_hi": 1.0000000298030045,
+     "price_lo": 1.0000000298023224,
+     "total_births_at_hi": 26415.07051950463,
+     "dual_bound": 22319.999877954593,
+     "cold_obj": 22320.000000000106,
+     "rel_gap_vs_cold": 5.467988906741554e-09,
+     "speedup": 1.1866348406084974
+    }
+   }
+  ],
+  "ablations": {
+   "runtime_sec": 17.0,
+   "mask": "C_50pct_seed101",
+   "n_countries": 16,
+   "full_mae": 0.0008726322115384616,
+   "pooled_deltas": [
+    0.0076500000000000005,
+    0.002190000000000001
+   ]
+  },
+  "E04_ccm_china": {
+   "description": "ccmpp.tmb ccmppR cohort-component births projection, 5 origins, annual single-age steps",
+   "table": "results/tables/E04_china_births_headtohead.csv",
+   "key_result": "CCM MAE 392.33 wan / MAPE 34.84% vs persistence 257.05 / 24.65% (frozen-rate failure under rapid fertility decline)"
+  },
+  "E04_bayestfr": {
+   "description": "bayesTFR native WPP2019 mode, origins 2005/2010 (2016 failed on internal bug), 5-year resolution",
+   "table": "results/tables/E04_rolling_multicountry_matched.csv",
+   "key_result": "matched-cell: MAE 0.1773 (worst), 90% coverage 67.2%, width 0.522"
+  },
+  "A0105_ocr": {
+   "description": "七普表1-5 分省年龄×性别: ink-projection column bands + 8x cell OCR",
+   "table": "data/raw/china_provincial/census2020_table1_5_provincial_age_sex.csv",
+   "key_result": "national 0-14=253.38M exact vs communique; 27/31 provinces complete; 4 partial (audited)"
+  }
+ },
+ "solver_status": {
+  "E10_instances": [
+   {
+    "instance": "L_T30",
+    "n_vars": "9555",
+    "scipy_one_target_s": "3.409973457999513",
+    "cold_total_s": "21.429417332999947",
+    "accelerated_total_s": "4.202033749999828",
+    "speedup": "5.099772778598179",
+    "prune_s": "2.2267932089998794",
+    "prune_dropped": "2.0",
+    "accuracy_rel_diff": "9.353328868391367e-15",
+    "verified_gap": "0.0"
+   },
+   {
+    "instance": "XL_31prov_T10",
+    "n_vars": "100905",
+    "scipy_one_target_s": "",
+    "cold_total_s": "43.49511220900058",
+    "accelerated_total_s": "36.65416750000077",
+    "speedup": "1.1866348406084974",
+    "prune_s": "",
+    "prune_dropped": "",
+    "accuracy_rel_diff": "5.467988906741554e-09",
+    "verified_gap": "5.467988906741554e-09"
+   }
+  ],
+  "note": "all LP solves certified: primal/dual residual <=1e-9, relative gap <=5.5e-9 in accelerated runs; 0.0 in certified bounds runs"
+ },
+ "statistical_uncertainty": {
+  "E02_seeds": "A-E masks averaged over 5 seeds; Ellison single seed (101) documented",
+  "E04": "MASE/CRPS/WIS by horizon in results/tables/E04_rolling_multicountry_summary.csv",
+  "E05": "province-clustered SE; HonestDiD Delta^SD(M) grid",
+  "E09": "LOCO q grid {0.75,...,0.95}; holdout never tuned"
+ }
+}

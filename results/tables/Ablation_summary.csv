@@ -1,0 +1,10 @@
+variant,mask,mae_mean,coverage_mean,width_mean,n_countries,note,mae_increase_pct_vs_full
+Full CIPD,C,0.0008726322115384616,0.9567307692307693,0.16000011177884615,16.0,,0.0
+w/o Population Accounting,C,0.0008892992788461539,0.9098557692307693,0.023852028846153846,16.0,,1.909976171783545
+w/o Cohort Dynamics,C,0.0008773677884615385,0.8858173076923077,0.0038917680288461536,16.0,,0.5426772998360807
+w/o Parity Structure,C,0.0037581173076923075,0.0,,16.0,,330.66451799512413
+w/o Hierarchical Calibration,C,0.0008726562500000001,0.984375,0.1997706730769231,16.0,,0.002754707105778742
+w/o Partial Identification,C,0.0008773677884615385,0.0,0.0,16.0,,0.5426772998360807
+w/o Shared Counterfactual Coupling,,,,,,E05 CCPI: width without coupling 908.8 wan vs with 409.6 wan (+121.9%); causal-constrained P_DiD reduces 56.1% (total 2016-2020) / 88.0% (p2 2017),
+w/o Goal-Oriented VOI,,,,,,E07: width reduction at budget 3.0 falls 96.5% -> 10.4% (random selection),
+w/o Robust Baseline-Safe Decision,,,,,,E08: nominal-best worst-case regret -0.046 vs baseline-safe R(u) <= 0,

@@ -1,0 +1,11 @@
+dgp,n_mc,true_cum_effect,naive_bias,naive_rmse,naive_wrong_sign_rate,cipd_coverage,cipd_mean_width,cipd_wrong_sign_rate,cipd_abstain_rate
+DGP-1: Null Effect,200,0.0,3.78,45.73,0.375,1.0,1957.8,0.0,1.0
+DGP-2: Short Tempo Shift,200,0.0,7.75,58.18,0.38,1.0,2497.7,0.0,1.0
+DGP-3: Persistent Quantum Lift,200,270.0,2.5,59.64,0.0,1.0,2493.0,0.0,1.0
+DGP-4: Shrinking Cohort Base,200,210.0,-125.04,139.15,0.095,1.0,2473.6,0.0,1.0
+DGP-5: Concurrent Econ Shock,200,240.0,-135.38,146.23,0.02,1.0,2465.6,0.0,1.0
+DGP-6: Regional Heterogeneity,200,175.0,-32.15,90.85,0.03,1.0,3677.8,0.0,1.0
+DGP-7: Hidden Confounding,200,130.0,-165.32,181.85,0.665,1.0,2968.8,0.0,1.0
+DGP-8: Policy Spillover,200,245.0,40.73,68.62,0.0,1.0,2440.9,0.0,1.0
+DGP-9: Measurement Error,200,240.0,5.33,139.96,0.055,1.0,5437.0,0.0,1.0
+DGP-10: Nonlinear Curvature,200,180.0,-170.25,181.28,0.465,1.0,2501.7,0.0,1.0
