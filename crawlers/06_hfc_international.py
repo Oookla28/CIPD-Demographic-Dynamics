@@ -22,16 +22,21 @@ SRC = RAW / "HFC_ASFR_BO/HFC_ASFR_BO.txt"
 
 
 def _ensure_extracted():
-    """原始 ZIP 随仓库分发，解压后的 .txt 不入库（体积>40MB）；此处按需解压。"""
+    """原始 ZIP 随仓库分发，解压后的 .txt 不入库；缺文件时按需解压到约定子目录。"""
     import zipfile
-    need = [("HFC_ASFR_BO.zip", SRC)]
-    for zname, target in need:
-        if not target.exists():
-            zp = RAW / zname
-            if zp.exists():
-                with zipfile.ZipFile(zp) as z:
-                    z.extractall(RAW)
-                print(f"[stage 06] extracted {zname}")
+    target = SRC
+    if target.exists():
+        return
+    zp = RAW / "HFC_ASFR_BO.zip"
+    if not zp.exists():
+        return
+    target.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(zp) as z:
+        members = [m for m in z.namelist() if m.endswith(".txt") and "__MACOSX" not in m]
+        if members:
+            with z.open(members[0]) as src:
+                target.write_bytes(src.read())
+            print(f"[stage 06] extracted HFC_ASFR_BO.zip -> {target.relative_to(ROOT)}")
 
 
 _ensure_extracted()
